@@ -5,7 +5,6 @@
   "main": "server.js",
   "scripts": {
     "start": "node ./server.js"
-
   },
   "keywords": [],
   "author": "Mauricio Correa",
@@ -13,6 +12,7 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
     "html-pdf": "^3.0.1",
@@ -20,4 +20,3 @@
     "nodemailer": "^6.9.8"
   }
 }
-
