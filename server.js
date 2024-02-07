@@ -20,21 +20,32 @@ app.use(bodyParser.json());
   const storage = multer.memoryStorage();
   const upload = multer({ storage: storage });
 
-const transporter = nodemailer.createTransport({
-host: 'smtp-mail.outlook.com',
-port: 587,
-secure: false, // true para el puerto 465, false para otros puertos
-tls: {
-  ciphers: "SSLv3",
-  rejectUnauthorized: false,
-},   
-auth: {
-      user: 'carmauc339@outlook.com',
-      pass: 'Damocles339',
-      },
-  authMethod: 'LOGIN'
-  });
+// const transporter = nodemailer.createTransport({
+// host: 'smtp-mail.outlook.com',
+// port: 587,
+// secure: false, // true para el puerto 465, false para otros puertos
+// tls: {
+//   ciphers: "SSLv3",
+//   rejectUnauthorized: false,
+// },   
+// auth: {
+//       user: 'carmauc339@outlook.com',
+//       pass: 'Damocles339',
+//       },
+//   authMethod: 'LOGIN'
+//   });
 
+  const transporter = nodemailer.createTransport({
+    service: "Gmail",
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: "carmauc339@gmail.com",
+      pass: "nvwy bksp muej ttnj",
+    },
+  });
+    
 
   // Manejo de solicitudes POST desde tu aplicación de React
 app.post('/enviar-correo', upload.fields([
