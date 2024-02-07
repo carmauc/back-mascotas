@@ -1,17 +1,17 @@
-const express = require('express');
 const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 var pdf = require('html-pdf');
 const { link } = require('fs');
 const path = require('path');
 const multer = require('multer');  // Import multer
 
+const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors());
-// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
   // Configurar multer para manejar la carga de archivos
