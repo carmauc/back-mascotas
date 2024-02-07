@@ -21,7 +21,7 @@ app.use(bodyParser.json());
   const upload = multer({ storage: storage });
 
 const transporter = nodemailer.createTransport({
-host: 'smtp.office365.com',
+host: 'smtp-mail.outlook.com',
 port: 587,
 secure: false, // true para el puerto 465, false para otros puertos
     auth: {
