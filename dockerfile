@@ -13,8 +13,9 @@ RUN npm install
 # Copia el resto de los archivos de la aplicación
 COPY . .
 
-# Expone el puerto en el que se ejecuta tu aplicación
-EXPOSE 3000
+ARG RAILWAY_STATIC_URL
+ARG PUBLIC_URL
+ARG PORT
 
 # Comando para iniciar la aplicación
 CMD ["node", "server.js"]

@@ -1,8 +1,0 @@
-name: back formularios
-type: service
-env:
-  - key: NODE_ENV
-    value: production
-plugins:
-  - name: node
-    version: 14
