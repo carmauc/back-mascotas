@@ -24,9 +24,13 @@ const transporter = nodemailer.createTransport({
 host: 'smtp-mail.outlook.com',
 port: 587,
 secure: false, // true para el puerto 465, false para otros puertos
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
+tls: {
+  ciphers: "SSLv3",
+  rejectUnauthorized: false,
+},   
+auth: {
+      user: 'carmauc339@outlook.com',
+      pass: 'Damocles339',
       },
   authMethod: 'LOGIN'
   });
