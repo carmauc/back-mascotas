@@ -2,7 +2,7 @@
 FROM node:latest
 
 # Establece el directorio de trabajo en la carpeta "back"
-WORKDIR /app/BACK
+WORKDIR /app
 
 # Copia los archivos del backend al contenedor
 COPY . .
