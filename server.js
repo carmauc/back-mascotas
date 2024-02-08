@@ -61,7 +61,7 @@ app.post('/enviar-correo', upload.fields([
 
 
     // Generar PDF con Puppeteer
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
     const htmlContent = '<html><body><h1>Hello, Puppeteer!</h1></body></html>';
     await page.setContent(htmlContent, { waitUntil: 'networkidle2' });
